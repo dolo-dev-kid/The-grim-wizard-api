@@ -1,0 +1,7 @@
+{
+  "name": "grim-wizzard-full-app",
+  "private": true,
+  "scripts": {
+    "server": "node server/server.js"
+  }
+}
