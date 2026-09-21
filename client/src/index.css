@@ -1,24 +1,49 @@
 body {
   margin: 0;
-  background: #111;
-  color: #fff;
+  background: #121212;
+  color: white;
   font-family: Arial, sans-serif;
-  padding: 2rem;
 }
-Install
-Backend:
-npm install express cors
-Frontend:
-cd client
-npm install
-Run
-Terminal 1:
-npm run server
-Terminal 2:
-cd client
-npm run dev
-Then open:
-http://localhost:5173
-You should see:
-Grim Wizzard
-Backend Status: ok
+
+.game {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.panel {
+  background: #222;
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: purple;
+  color: white;
+  font-size: 16px;
+}
+
+button:hover {
+  background: darkviolet;
+}
+
+.log {
+  margin-top: 20px;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+---
