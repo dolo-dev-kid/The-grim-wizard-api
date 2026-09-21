@@ -1,19 +1,50 @@
-import { useEffect, useState } from "react";
+monster is defeated.");
+    }
+  }
 
-export default function App() {
-  const [serverStatus, setServerStatus] = useState("Loading...");
+  function enemyAttack() {
+    if (enemyHp <= 0) return;
 
-  useEffect(() => {
-    fetch("http://localhost:3001/api/health")
-      .then((res) => res.json())
-      .then((data) => setServerStatus(data.status))
-      .catch(() => setServerStatus("Offline"));
-  }, []);
+    const damage = Math.floor(Math.random() * 10) + 3;
+    const newHp = Math.max(0, playerHp - damage);
+
+    setPlayerHp(newHp);
+    setMessage(`Monster attacks for ${damage} damage!`);
+
+    if (newHp === 0) {
+      setMessage("Game Over.");
+    }
+  }
+
+  function resetGame() {
+    setPlayerHp(100);
+    setEnemyHp(60);
+    setMessage("A new monster approaches.");
+  }
 
   return (
-    <div>
-      <h1>Grim Wizzard</h1>
-      <p>Backend Status: {serverStatus}</p>
+    <div className="game">
+      <h1>🧙 Grim Wizzard</h1>
+
+      <div className="panel">
+        <h2>Wizard</h2>
+        <p>HP: {playerHp}</p>
+      </div>
+
+      <div className="panel">
+        <h2>Dungeon Beast</h2>
+        <p>HP: {enemyHp}</p>
+      </div>
+
+      <div className="controls">
+        <button onClick={castSpell}>Cast Spell</button>
+        <button onClick={enemyAttack}>Wait</button>
+        <button onClick={resetGame}>Restart</button>
+      </div>
+
+      <div className="log">
+        <p>{message}</p>
+      </div>
     </div>
   );
 }
