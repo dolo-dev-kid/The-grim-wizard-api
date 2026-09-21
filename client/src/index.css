@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+Install
+Backend:
+npm install express cors
+Frontend:
+cd client
+npm install
+Run
+Terminal 1:
+npm run server
+Terminal 2:
+cd client
+npm run dev
+Then open:
+http://localhost:5173
+You should see:
+Grim Wizzard
+Backend Status: ok
