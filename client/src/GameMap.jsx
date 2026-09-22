@@ -3,7 +3,7 @@ const tiles = [
   ["🌲", "⬜", "⬜", "⬜", "🌲"],
   ["🌲", "⬜", "🧙", "⬜", "🌲"],
   ["🌲", "⬜", "⬜", "⬜", "🌲"],
-  ["🌲", "🌲", "🌲", "🌲", "🌲"]
+  ["🌲", "🌲", "🌲", "🌲", "🌲"],
 ];
 
 export default function GameMap() {
@@ -21,7 +21,3 @@ export default function GameMap() {
     </div>
   );
 }
-Import into App:
-import GameMap from "./GameMap";
-
-<GameMap />
